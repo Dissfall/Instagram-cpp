@@ -33,9 +33,9 @@ public:
     explicit Session(const std::string &token = "token");
 
     string getUsersSelf();
-    string getUsersSelfMediaRecent();
-    string getMediaSearch(double lat = 0, double lng = 0, int distance = 1000);
-    string getMediaSearch(int distance = 1000);
+    string getUsersSelfRecentMedia();
+    string searchAreaRecentMedia(double lat = 0, double lng = 0, int distance = 1000);
+    string searchAreaRecentMedia(int distance = 1000);
     string getMediaComments(string mediaId);
     string getTagInfo(string tagName);
     string getTagRecentMedia(string tagName);

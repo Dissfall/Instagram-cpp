@@ -48,7 +48,7 @@ string Session::getUsersSelf() {
     return sendRequest(url).get();
 }
 
-string Session::getUsersSelfMediaRecent() {
+string Session::getUsersSelfRecentMedia() {
     string url;
     string address("/v1/users/self/media/recent/?access_token=");
 
@@ -60,7 +60,7 @@ string Session::getUsersSelfMediaRecent() {
     return sendRequest(url).get();
 }
 
-string Session::getMediaSearch(double lat, double lng, int distance) {
+string Session::searchAreaRecentMedia(double lat, double lng, int distance) {
     string url;
     string address("/v1/media/search?");
 
@@ -85,7 +85,7 @@ string Session::getMediaSearch(double lat, double lng, int distance) {
     return sendRequest(url).get();
 }
 
-string Session::getMediaSearch(int distance) {
+string Session::searchAreaRecentMedia(int distance) {
     string url;
     string address("/v1/media/search?");
 
