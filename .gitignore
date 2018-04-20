@@ -1,0 +1,7 @@
+.idea/*
+
+cmake-build-debug/*
+tests/cmake-build-debug/*
+CMakeFiles
+
+tests/config.h
