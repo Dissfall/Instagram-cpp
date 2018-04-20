@@ -100,3 +100,91 @@ string Session::getMediaSearch(int distance) {
 
     return sendRequest(url).get();
 }
+
+string Session::getMediaComments(string mediaId) { // 1733142723563011958_4486674398
+    string url;
+    string address("/v1/media/"); address.append(mediaId); address.append("/comments?access_token=");
+
+    url.append(host);
+    url.append(address);
+
+    url.append(accessToken);
+
+    return sendRequest(url).get();
+}
+
+string Session::getTagInfo(string tagName) {
+    string url;
+    string address("/v1/tags/"); address.append(tagName); address.append("?access_token=");
+
+    url.append(host);
+    url.append(address);
+
+    url.append(accessToken);
+
+    return sendRequest(url).get();
+}
+
+string Session::getTagRecentMedia(string tagName) {
+    string url;
+    string address("/v1/tags/"); address.append(tagName); address.append("/media/recent/?access_token=");
+
+    url.append(host);
+    url.append(address);
+
+    url.append(accessToken);
+
+    return sendRequest(url).get();
+}
+
+string Session::searchTag(string tagName) {
+    string url;
+    string address("/v1/tags/search?q="); address.append(tagName); address.append("&access_token=");
+
+    url.append(host);
+    url.append(address);
+
+    url.append(accessToken);
+
+    return sendRequest(url).get();
+}
+
+string Session::getLocationInfo(string locationId) {
+    string url;
+    string address("/v1/locations/"); address.append(locationId); address.append("?access_token=");
+
+    url.append(host);
+    url.append(address);
+
+    url.append(accessToken);
+
+    return sendRequest(url).get();
+}
+
+string Session::getLocationRecentMedia(string locationId) {
+    string url;
+    string address("/v1/locations/"); address.append(locationId); address.append("/media/recent?access_token=");
+
+    url.append(host);
+    url.append(address);
+
+    url.append(accessToken);
+
+    return sendRequest(url).get();
+}
+
+string Session::searchLocation(double lat, double lng) {
+    string url;
+    string address("/v1/locations/search?");
+
+    url.append(host);
+    url.append(address);
+
+    url.append("lat="); url.append(to_string(lat));
+    url.append("&lng="); url.append(to_string(lat));
+
+    url.append("&access_token=");
+    url.append(accessToken);
+
+    return sendRequest(url).get();
+}

@@ -36,6 +36,13 @@ public:
     string getUsersSelfMediaRecent();
     string getMediaSearch(double lat = 0, double lng = 0, int distance = 1000);
     string getMediaSearch(int distance = 1000);
+    string getMediaComments(string mediaId);
+    string getTagInfo(string tagName);
+    string getTagRecentMedia(string tagName);
+    string searchTag(string tagName);
+    string getLocationInfo(string locationId);
+    string getLocationRecentMedia(string locationId);
+    string searchLocation(double lat, double lng);
 
 private:
     future<string> sendRequest(const string &url, const string &body = "");
