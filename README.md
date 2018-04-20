@@ -1,26 +1,26 @@
 # Instagram C++ 
 _The C++ library provides a simple interface for working with public Instagram API_
 
-## Requires
-------------
+Requires
+--------
   * curlpp
   * The library works according to the standard С++14 (С++11 tested)
 
-## Instagram REST and Search APIs
-----------------------------------
+Instagram REST and Search APIs
+------------------------------
 Documentation and last news the Instagram API you can find on [Instagram developer site](http://instagram.com/developer)
 
-## Blog
---------
+Blog
+----
 You can find me in social networks by username **_dissfall_**:
 _(Vero, twitter, instagram...)_
 
-## Authentication
-------------------
+Authentication
+--------------
 Library uses Instagram access token to provide functionality. How get access token you can find there: https://instagram.com/developer/authentication/
 
-## Example of use
------------------
+Example of use
+--------------
 ```
 #include <iostream>
 
@@ -37,8 +37,8 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-## Endpoints
--------------
+Endpoints
+---------
 _All endpoints resurns **string** type_
 
 ### Users
@@ -88,7 +88,7 @@ Returns result of searching for a location by geographic coordinate
 https://instagram.com/developer/endpoints/locations/#get_locations_search
 
 Contributing
--------------
+------------
 Here are some ways *you* can contribute:
 
   * by using alpha, beta, and prerelease versions
