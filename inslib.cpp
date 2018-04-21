@@ -1,7 +1,19 @@
-//
-// Created by dissfall on 07.04.18.
-//
-//#define _GLIBCXX_USE_CXX11_ABI 0
+/*
+ *      Copyright 2018 George Lykuanov (dissfalling@gmail.com)
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ *
+ */
 
 #include "inslib.h"
 
@@ -48,7 +60,7 @@ string Session::getUsersSelf() {
     return sendRequest(url).get();
 }
 
-string Session::getUsersSelfMediaRecent() {
+string Session::getUsersSelfRecentMedia() {
     string url;
     string address("/v1/users/self/media/recent/?access_token=");
 
@@ -60,7 +72,7 @@ string Session::getUsersSelfMediaRecent() {
     return sendRequest(url).get();
 }
 
-string Session::getMediaSearch(double lat, double lng, int distance) {
+string Session::searchAreaRecentMedia(double lat, double lng, int distance) {
     string url;
     string address("/v1/media/search?");
 
@@ -85,7 +97,7 @@ string Session::getMediaSearch(double lat, double lng, int distance) {
     return sendRequest(url).get();
 }
 
-string Session::getMediaSearch(int distance) {
+string Session::searchAreaRecentMedia(int distance) {
     string url;
     string address("/v1/media/search?");
 
