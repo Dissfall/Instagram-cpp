@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "../inslib.h"
+#include <inslib.h>
 #include "config.h"
 
 using namespace std;

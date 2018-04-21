@@ -3,5 +3,10 @@
 cmake-build-debug/*
 tests/cmake-build-debug/*
 CMakeFiles
+CMakeCache*
+Makefile*
+cmake_install*
+*.cbp
+build/*
 
 tests/config.h
