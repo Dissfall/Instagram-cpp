@@ -19,6 +19,18 @@ Authentication
 --------------
 Library uses Instagram access token to provide functionality. How get access token you can find there: https://instagram.com/developer/authentication/
 
+Instalation
+-----------
+bash:
+```
+$ git clone https://github.com/Dissfall/Instagram-cpp.git
+$ cd ./Instagram-cpp
+$ mkdir ./build && cd ./build
+$ cmake ..
+$ make 
+$ sudo make install
+```
+
 Example of use
 --------------
 ```
