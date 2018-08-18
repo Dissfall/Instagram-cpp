@@ -3,7 +3,7 @@ _The C++ library provides a simple interface for working with public Instagram A
 
 Requires
 --------
-  * curlpp
+  * [curlpp](https://github.com/jpbarrette/curlpp)
   * The library works according to the standard С++14 (С++11 tested)
 
 Instagram REST and Search APIs
@@ -21,7 +21,17 @@ Library uses Instagram access token to provide functionality. How get access tok
 
 Instalation
 -----------
-bash:
+Ubuntu / Debian
+
+Dependencies instalation:
+```
+$ sudo apt install libcurl-dev
+$ git clone https://github.com/jpbarrette/curlpp.git
+$ cd curlpp
+$ cmake .
+$ sudo make install
+```
+Library instalation:
 ```
 $ git clone https://github.com/Dissfall/Instagram-cpp.git
 $ cd ./Instagram-cpp
@@ -30,7 +40,25 @@ $ cmake ..
 $ make 
 $ sudo make install
 ```
+SUSE
 
+Dependencies instalation:
+```
+$ sudo zypper in libcurl-devel
+$ git clone https://github.com/jpbarrette/curlpp.git
+$ cd curlpp
+$ cmake .
+$ sudo make install
+```
+Library instalation:
+```
+$ git clone https://github.com/Dissfall/Instagram-cpp.git
+$ cd ./Instagram-cpp
+$ mkdir ./build && cd ./build
+$ cmake ..
+$ make 
+$ sudo make install
+```
 Example of use
 --------------
 ```
